@@ -1,1 +1,28 @@
-/*  your css code here. If applicable */
+ body {
+  background-color: #a55eea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+}
+
+.clock-container {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 30px 50px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.date {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.time {
+  font-size: 36px;
+  font-weight: bold;
+}
