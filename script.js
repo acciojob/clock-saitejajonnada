@@ -1,16 +1,13 @@
-//your JS code here. If required.
 function updateClock() {
   const now = new Date();
 
-  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-  const dateStr = now.toLocaleDateString(undefined, options);
+  const weekday = now.toLocaleDateString(undefined, { weekday: 'long' });
+  const date = now.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' });
+  const time = now.toLocaleTimeString(undefined, { hour: 'numeric', minute: '2-digit', second: '2-digit', hour12: true });
 
-  const timeStr = now.toLocaleTimeString();
-
-  document.getElementById('date').textContent = dateStr;
-  document.getElementById('time').textContent = timeStr;
+  document.getElementById('date').innerHTML = `<span>${weekday},</span> ${date}`;
+  document.getElementById('time').textContent = time;
 }
 
-// Update immediately and then every second
 updateClock();
 setInterval(updateClock, 1000);
